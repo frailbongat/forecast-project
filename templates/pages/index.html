@@ -1,0 +1,181 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- IMPORT TRAINING DATA START -->
+<h2 class="lead mt-6">Import Training Data</h2>
+<div class="form-group mt-5">
+    <input type="file" id="file" class="form-control-file">
+    <small class="form-text text-muted" id="fileHelp">Max 20mb size</small>
+</div>
+<!-- IMPORT TRAINING DATA END -->
+
+<hr class="mt-4">
+
+<!-- CREATE ARTIFICIAL NEURAL NETWORK START -->
+<h2 class="lead mt-5">Create Artificial Neural Network</h2>
+<h3 class="lead-1 mt-5">ANN Architecture</h3>
+<div class="d-flex mt-4 flex-column-sm">
+    <div class="w-33 mr-5 mr-3-lg w-100-sm mb-3-sm">
+        <form class="form-inline">
+            <label for="input-neurons">Input Neurons</label>
+            <input type="number" class="form-control w-61 ml-2 w-55-lg w-36-md w-100-sm ml-0-sm" id="input-neurons">
+        </form>
+    </div>
+    <div class="w-33 mr-5 mr-3-lg pl-2-lg w-100-sm pl-0-sm mr-0-sm mb-3-sm">
+        <form class="form-inline">
+            <label for="hidden-neurons">Hidden Neurons</label>
+            <input type="number" class="form-control w-61 ml-2 w-55-lg w-36-md w-100-sm ml-0-sm" id="hidden-neurons">
+        </form>
+    </div>
+    <div class="w-33 pl-3 pl-4-lg w-100-sm pl-0-sm">
+        <form class="form-inline">
+            <label for="output-neurons">Output Neurons</label>
+            <input type="number" class="form-control w-61 ml-2 w-55-lg w-36-md w-100-sm ml-0-sm" id="output-neurons">
+        </form>
+    </div>
+</div>
+<hr class="mt-4">
+<h3 class="lead-1 mt-5">ANN Model Design</h3>
+<div class="d-flex mt-4 flex-column-sm">
+    <div class="w-50 pr-3 w-100-sm mb-3-sm pr-0-sm">
+        <form class="form-inline">
+            <label for="training-algorithm">Training Algorithm</label>
+            <select class="form-control ml-2 w-72 w-66-lg w-54-md ml-0-sm w-100-sm" id="training-algorithm">
+                <option>Levenberg</option>
+                <option>Levenberg 2</option>
+            </select>
+        </form>
+    </div>
+    <div class="w-50 pl-4 pl-0-sm w-100-sm mb-3-sm">
+        <form class="form-inline">
+            <label for="activation-function">Acitvation Function</label>
+            <select class="form-control ml-2 w-72 w-66-lg w-54-md ml-0-sm w-100-sm" id="activation-function">
+                <option>Logistic</option>
+                <option>Logistic 2</option>
+            </select>
+        </form>
+    </div>
+</div>
+<div class="d-flex mt-4 flex-column-sm mt-0-sm">
+    <div class="w-33 w-100-sm mb-3-sm">
+        <form class="form-inline">
+            <label for="learning">Learning Rate</label>
+            <input type="number" class="form-control ml-2 w-55 w-36-md ml-0-sm w-100-sm" id="learning">
+        </form>
+    </div>
+    <div class="w-33 ml-5 ml-0-lg pl-4-md pl-0-sm w-100-sm mb-3-sm">
+        <form class="form-inline">
+            <label for="momentum">Momentum</label>
+            <input type="number" class="form-control ml-2 w-70 w-36-md ml-0-sm w-100-sm" id="momentum">
+        </form>
+    </div>
+    <div class="w-33 ml-5 pl-5 ml-3-lg pl-3-lg pl-5-md ml-0-sm pl-0-sm w-100-sm">
+        <form class="form-inline">
+            <label for="epoch">Epoch Size</label>
+            <input type="number" class="form-control ml-2 w-69 w-48-md ml-0-sm w-100-sm" id="epoch">
+        </form>
+    </div>
+</div>
+<div class="d-flex mt-4 flex-column-sm">
+    <div class="w-33 mr-4 mb-3-sm w-100-sm">
+        <button class="btn btn-outline-primary w-100 w-100-sm" type="button">Create Network</button>
+    </div>
+    <div class="w-33 mr-4 mb-3-sm w-100-sm">
+        <button class="btn btn-outline-primary w-100 w-100-sm" type="button">Train Network</button>
+    </div>
+    <div class="w-33 w-100-sm">
+        <button class="btn btn-outline-primary w-100 w-100-sm" type="button">Reset Network</button>
+    </div>
+</div>
+<!-- CREATE ARTIFICIAL NEURAL NETWORK END -->
+
+<hr class="mt-4">
+
+<!-- TRAINING DATA PREVIEW START -->
+<h2 class="lead mt-5">Training Data Preview</h2>
+<div class="table-responsive">
+    <table class="table table-hover mt-5">
+        <thead>
+            <tr>
+                <th>Day</th>
+                <th>Month</th>
+                <th>Year</th>
+                <th>Hour</th>
+                <th>Minute</th>
+                <th>Mandulog</th>
+                <th>Dagikilaan</th>
+                <th style="width: 60px;">Rogongon</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>01</td>
+                <td>10</td>
+                <td>2017</td>
+                <td>05</td>
+                <td>00</td>
+                <td>2.8cm</td>
+                <td>1.6cm</td>
+                <td>1.5cm</td>
+            </tr>
+            <tr>
+                <td>01</td>
+                <td>10</td>
+                <td>2017</td>
+                <td>05</td>
+                <td>30</td>
+                <td>3.0cm</td>
+                <td>2.6cm</td>
+                <td>1.8cm</td>
+            </tr>
+            <tr>
+                <td>01</td>
+                <td>10</td>
+                <td>2017</td>
+                <td>06</td>
+                <td>00</td>
+                <td>2.5cm</td>
+                <td>2.9cm</td>
+                <td>2.6cm</td>
+            </tr>
+            <tr>
+                <td>01</td>
+                <td>10</td>
+                <td>2017</td>
+                <td>06</td>
+                <td>30</td>
+                <td>3.8cm</td>
+                <td>3.8cm</td>
+                <td>2.5cm</td>
+            </tr>
+            <tr>
+                <td>01</td>
+                <td>10</td>
+                <td>2017</td>
+                <td>07</td>
+                <td>00</td>
+                <td>2.6cm</td>
+                <td>1.8cm</td>
+                <td>3.4cm</td>
+            </tr>
+            <tr>
+                <td>01</td>
+                <td>10</td>
+                <td>2017</td>
+                <td>07</td>
+                <td>30</td>
+                <td>3.1cm</td>
+                <td>2.6cm</td>
+                <td>2.5cm</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<!-- TRAINING DATA PREVIEW END -->
+
+<hr>
+
+<!-- TRAINING RESULT START -->
+<h2 class="lead mt-5" style="margin-bottom: 400px;">Training Result</h2>
+<!-- TRAINING RESULT END -->
+{% endblock %}

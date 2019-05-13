@@ -1,0 +1,81 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!-- IMPORT VALIDATION DATA START -->
+<h2 class="lead mt-6">Import Validation Data</h2>
+<div class="form-group mt-5">
+    <input type="file" id="file" class="form-control-file">
+    <small class="form-text text-muted" id="fileHelp">Max 20mb size</small>
+</div>
+<div class="d-flex mt-4 flex-column-sm">
+    <div class="w-50 mr-4 w-100-sm mb-3-sm">
+        <button class="btn btn-outline-primary w-100" type="button">Validate</button>
+    </div>
+    <div class="w-50 mr-4 w-100-sm">
+        <button class="btn btn-outline-primary w-100" type="button">Save Model</button>
+    </div>
+</div>
+<!-- IMPORT VALIDATION DATA END -->
+
+<hr class="mt-4">
+
+<!-- RESULT START -->
+<h2 class="lead mt-5">Result</h2>
+<div class="d-flex mt-5 flex-column-sm">
+    <div class="w-50 mr-4 w-100-sm mb-3-sm">
+        <button class="btn btn-outline-primary w-100" type="button">View Visualization</button>
+    </div>
+    <div class="w-50 mr-4 w-100-sm">
+        <button class="btn btn-outline-primary w-100" type="button">Save Results</button>
+    </div>
+</div>
+<div class="table-responsive">
+    <table class="table table-hover mt-4">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Time</th>
+                <th>Actual</th>
+                <th>Predicted</th>
+                <th>MAPE</th>
+                <th style="width: 60px;">RMSE</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>01</td>
+                <td>1:00pm</td>
+                <td>1.2cm</td>
+                <td>1.1cm</td>
+                <td>10.11%</td>
+                <td>12.001%</td>
+            </tr>
+            <tr>
+                <td>01</td>
+                <td>1:00pm</td>
+                <td>2.31cm</td>
+                <td>2.33cm</td>
+                <td>11.32%</td>
+                <td>9.00%</td>
+            </tr>
+            <tr>
+                <td>01</td>
+                <td>2:00pm</td>
+                <td>3.0cm</td>
+                <td>3.0cm</td>
+                <td>8.43%</td>
+                <td>9.11%</td>
+            </tr>
+            <tr>
+                <td>01</td>
+                <td>2:30pm</td>
+                <td>1.2cm</td>
+                <td>1.2cm</td>
+                <td>11.11%</td>
+                <td>13.01%</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<!-- RESULT END -->
+{% endblock %}
